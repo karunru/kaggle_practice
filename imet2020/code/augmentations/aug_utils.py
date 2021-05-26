@@ -1,10 +1,12 @@
 import numpy as np
 
 
+
+
 def rand_bbox(size, lam):
     W = size[2]
     H = size[3]
-    cut_rat = np.sqrt(1. - lam)
+    cut_rat = np.sqrt(1.0 - lam)
     cut_w = np.int(W * cut_rat)
     cut_h = np.int(H * cut_rat)
 

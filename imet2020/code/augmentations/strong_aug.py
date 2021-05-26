@@ -2,7 +2,7 @@ import torch
 import numpy as np
 from torchvision.transforms import Resize
 
-from aug_utils import rand_bbox, rand_region
+from .aug_utils import rand_bbox, rand_region
 
 
 __all__ = [

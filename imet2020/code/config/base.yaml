@@ -1,15 +1,15 @@
-seed: 2021
+seed: 1031
 log_path: ./log/
 config_path: ./config/
-weight_path: /home/phalanx/weights/imet/
+weight_path: ./weights/
 header: epoch train_loss train_acc val_loss val_acc
 
-root: /home/phalanx/dataset/imet/
+root: ./dataset/imet/
 
 train:
   num_labels: 3474
   n_splits: 5
-  epoch: 100
+  epoch: 10
   accumulate: 4
 
 transform:
@@ -24,14 +24,14 @@ strong_transform:
 
 
 train_loader:
-  batch_size: 96
+  batch_size: 10
   shuffle: True
   num_workers: 8
   pin_memory: False
   drop_last: True
 
 val_loader:
-  batch_size: 96
+  batch_size: 10
   shuffle: False
   num_workers: 8
   pin_memory: False

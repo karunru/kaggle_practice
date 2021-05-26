@@ -1,5 +1,5 @@
-import numpy as np
 import cv2
+import numpy as np
 from torch.utils.data import Dataset
 
 
@@ -16,7 +16,7 @@ class MetDataset(Dataset):
     def __getitem__(self, idx):
         image = cv2.imread(self.X[idx])
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        image = self.transform(image=image)['image']
+        image = self.transform(image=image)["image"]
         image = image.transpose(2, 0, 1)
 
         label = self.y[idx] if self.y is not None else None
